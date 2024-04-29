@@ -1,0 +1,31 @@
+###
+//crear los datos
+POST http://localhost:3001/api/users HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "Gata Loco",
+    "age": "24",
+    "email": "GatoLoco@gmail.com"
+}
+###
+//llamar todos los datos creados
+GET http://localhost:3001/api/users HTTP/1.1
+
+###
+//llamar una id especifica
+GET http://localhost:3001/api/users/66301222c9de7f8b1262fd00 HTTP/1.1
+
+###
+//modificar
+PUT http://localhost:3001/api/users/66301222c9de7f8b1262fd00 HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "Gato Loco",
+    "age": "24",
+    "email": "GatoLoco@gmail.com"
+}
+###
+//eliminar un dato
+DELETE http://localhost:3001/api/users/66301222c9de7f8b1262fd00 HTTP/1.1
